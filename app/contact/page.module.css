@@ -1,0 +1,43 @@
+.contactWrapper {
+  display: flex;
+  margin: 0rem auto;
+}
+
+.contactWrapper > div {
+  flex-grow: 1;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.contactCopy {
+  margin: 1rem 0 2rem;
+  max-width: 550px;
+}
+
+.locationInfo {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.locationInfo li {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 1rem;
+}
+
+.locationInfo img {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 1200px){
+  .contactWrapper {
+    flex-direction: column;
+  }
+
+  .contactCopy {
+    max-width: 100%;
+  }
+}

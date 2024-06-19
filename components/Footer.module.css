@@ -1,0 +1,50 @@
+.footer {
+    position: relative;
+    text-align: center;
+    padding: 2rem 0;
+    overflow: hidden;
+}
+
+.footerBackground {
+    z-index: -1;
+    width: 100% !important;
+    height: auto !important;
+    max-width: 1920px;
+    opacity: .5;
+    top: calc(50% + 72px) !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 600px){
+    .footerBackground {
+        width: 120% !important;
+        top: 50% !important;
+    }
+}
+
+.footerLogo {
+    font-size: 2.5rem;
+    width: 300px;
+    margin: 2rem auto;
+}
+
+.footerEmail {
+    display: inline-block;
+    margin: 1rem 0;
+}
+
+.socialWrapper {
+    margin: 2rem 0 2rem;
+}
+
+.socialWrapper img {
+    background: var(--primary-color);
+    padding: 7px;
+    border-radius: 50px;
+    margin: 0 8px;
+}
+
+.footerCopyright {
+    opacity: .7;
+}

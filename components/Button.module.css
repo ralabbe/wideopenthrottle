@@ -1,0 +1,28 @@
+.button, .buttonInverted {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 50px;
+    padding: 10px 30px;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    transition: all .2s;
+    font-weight: 500;
+}
+
+.buttonInverted {
+    background: var(--primary-color);
+    color: black;
+}
+
+
+@media (min-width: 851px){
+    .button:hover {
+        background: var(--primary-color);
+        color: black;
+    }
+
+    .buttonInverted:hover {
+        background: transparent;
+        color: var(--primary-color);
+    }
+}

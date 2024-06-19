@@ -1,0 +1,119 @@
+.navbar {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 30px 0;
+  transition: all .5s;
+  
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,1+100 */
+  background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,.7) 70%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.navbar img {
+  max-width: 230px;
+  height: auto;
+  transition: all .5s;
+}
+
+.stickyNavbar {
+  padding: 25px 0;
+}
+
+.stickyNavbar img {
+  max-width: 180px;
+  height: auto;
+  transition: all .5s;
+}
+
+.navbar > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar li {
+  display: inline-block;
+  margin: 0 .7rem;
+}
+
+.navbar li a:not([class*='button']) {
+  display: inline-block;
+  padding: 10px 15px;
+  transition: opacity .2s;
+}
+
+.navbar li a:not([class*='button']):hover {
+  opacity: .8;
+}
+
+.navbar li [class*='button'] {
+  margin-top: 0;
+  padding: 11px 33px;
+  font-size: 1.05rem;
+}
+
+.mobileIconWrapper button {
+  background: transparent;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.navClose {
+  text-align: right;
+}
+
+.navClose button {
+  background: transparent;
+  border-radius: 100px;
+  font-size: 1.3rem;
+  border: none;
+  /* padding: 1rem; */
+  margin-right: 15px;
+}
+
+@media (min-width: 851px){
+  .mobileIconWrapper, .navClose {
+    display: none !important;
+  }
+}
+
+@media (max-width: 850px){
+  .navbar ul {
+    position: absolute;
+    top: 0;
+    right: -100vw;
+    height: 100vh;
+    background: rgba(0,0,0,.95);
+    max-width: 80vw;
+    text-align: center;
+    transition: right .5s;
+  }
+
+  .navbar ul li {
+    display: block;
+    margin: 1rem 0;
+  }
+  
+  .navbar ul li a:not([class*='button']){
+    padding: 20px;
+    display: block;
+    width: 300px;
+  }
+
+  ul.mobileMenuActive {
+    right: 0;
+  }
+}
+
+@media (max-width: 500px){
+  .navbar img {
+    max-width: 170px;
+  }
+
+  .stickyNavbar img {
+    max-width: 140px;
+  }
+}

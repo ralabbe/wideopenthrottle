@@ -1,0 +1,165 @@
+:root {
+  --primary-color: #FF6161;
+  --content-padding: 40px;
+  --max-width: 1920px;
+  --line-height: 1.6rem;
+  --subheading-margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background: black;
+  color: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin-bottom: .5rem;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  margin-bottom: .5rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+  margin-bottom: .5rem;
+}
+
+.subheading {
+  font-size: 1.3rem;
+  display: block;
+  margin: var(--subheading-margin);
+}
+
+.centerText {
+  text-align: center;
+}
+
+.container {
+  width: var(--max-width);
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+p {
+  line-height: var(--line-height);
+}
+
+section {
+  position: relative;
+}
+
+.linesAround, .lineAfter {
+  position: relative;
+  display: inline-block;
+}
+
+.linesAround::before, .linesAround::after {
+  height: 1px;
+  background: var(--primary-color);
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: calc(var(--decorative-width) * -1);
+  --decorative-width: -100px;
+}
+
+.linesAround::before {
+  left: calc(var(--decorative-width) - 15px);
+}
+
+.linesAround::after {
+  right: calc(var(--decorative-width) - 15px);
+}
+
+.lineAfter::after {
+  height: 1px;
+  width: 80px;
+  content: '';
+  display: block;
+  position: absolute;
+  top: calc(50% + 2px);
+  transform: translateY(-50%);
+  left: calc(100% + 10px);
+  background: var(--primary-color);
+}
+
+/* Button */
+.button, .buttonInverted {
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 50px;
+  padding: 10px 30px;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  transition: background-color .2s, color .2s;
+  font-weight: 500;
+  font-size: inherit;
+}
+
+.button {
+  background: transparent;
+}
+
+.buttonInverted {
+  background: var(--primary-color);
+  color: black;
+}
+
+.grecaptcha-badge {
+  display: none !important;
+}
+
+@media (min-width: 851px){
+  .button:hover {
+    background: var(--primary-color);
+    color: black;
+  }
+
+  .buttonInverted:hover {
+    background: transparent;
+    color: var(--primary-color);
+  }
+}
+
+/* Small Breakpoint */
+@media (max-width: 600px){
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  .linesAround::before, .linesAround::after {
+    --decorative-width: -70px;
+  }
+}

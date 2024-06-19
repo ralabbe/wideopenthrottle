@@ -1,0 +1,58 @@
+.hero {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 30vh;
+    padding: 9rem 0 10rem;
+    overflow: hidden;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,1+100 */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 70%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.heroHome {
+    min-height: 95vh;
+}
+
+.hero::before {
+    background: url('/img/car_hero.jpg') center center;
+    background-size: cover;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: .3;
+}
+  
+.hero > div > div {
+    width: 50%;
+    margin: 0;
+}
+  
+.heroSubheading {
+    position: relative;
+}
+
+.headingOnly {
+    text-align: center;
+    padding: 10rem 0 8rem;
+}
+
+.headingOnly > div > div {
+    width: 100%;
+}
+
+@media (max-width: 920px){
+    .hero > div > div {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px){
+    .headingOnly {
+        padding-bottom: 5rem;
+    }
+}

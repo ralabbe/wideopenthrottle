@@ -1,0 +1,347 @@
+.smallContainer {
+  width: 700px;
+}
+
+.buttonsWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@media (max-width: 500px){
+  .buttonsWrapper {
+    margin-top: 1rem;
+    gap: .5rem;
+    flex-direction: column;
+  }
+}
+
+.fogBackground {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  opacity: .7;
+}
+
+.fogBackground img {
+  min-width: 500px;
+  max-width: unset !important;
+}
+
+@media (max-width: 1920px){
+  .fogBackground img {
+    width: auto !important;
+  }
+}
+
+/* Paint Protection Section */
+.xpelPaintSection {
+  margin: -5rem 0 5rem 0;
+  z-index: 1;
+}
+
+/* Auto Service Section */
+.autoServices {
+  margin-top: 5rem;
+  z-index: 1;
+}
+
+.autoServices [class*='button'] {
+  position: relative;
+  margin-top: 3rem;
+  border: 1px solid transparent;
+  box-shadow:
+  0 0 0 1px var(--primary-color),
+  0 0 0 15px black;
+}
+
+.autoServices [class*='button']:hover {
+  color: var(--primary-color);
+  background: black;
+}
+
+.autoServices [class*='button']::after {
+  width: 1px;
+  height: 30vw;
+  max-height: 450px;
+  min-height: 240px;
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: -1;
+  background-color: var(--primary-color);
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Tint Section */
+.tintSolutions {
+  margin: 6rem 0 10rem;
+}
+
+.tintSolutions > div {
+  display: flex;
+  align-items: center;
+}
+
+.tintSolutions > div > div {
+  flex-grow: 1;
+  width: 100%;
+  padding: 0 1.5rem;
+}
+
+.tintSolutionsImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.tintSolutionsImageWrapper img {
+  top: 80px !important;
+  width: auto !important;
+  height: auto !important;
+  left: unset !important;
+  right: -2.5rem !important;
+  max-width: 100%;
+  z-index: 1;
+}
+
+/* XPEL Section */
+.xpelSection {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  text-align: center
+}
+
+.xpelTintInfo {
+  width: 1200px;
+}
+
+.xpelTintInfo > div {
+  margin: 3rem 0;
+  display: flex;
+  gap: 20px;
+}
+
+.xpelTintInfo > div > div {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.xpelTintInfo p {
+  margin-bottom: 1rem;
+}
+
+.xpelTintInfo img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+@media (max-width: 1100px){
+  .xpelTintInfo > div {
+    flex-direction: column;
+  }
+
+  .xpelTintInfo > div {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 800px){
+  .xpelSectionSubheading::before,
+  .xpelSectionSubheading::after {
+    display: none;
+  }
+}
+
+/* Gallery Section */
+.gallerySection {
+  text-align: center;
+  margin: 8rem 0;
+}
+
+.galleryTintSlider {
+  width: 850px;
+  max-width: 90%;
+  margin: 2rem auto 4rem;
+}
+
+.galleryMessage {
+  width: 600px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Medium Breakpoint */
+@media (max-width: 1200px){
+  .hero > div > div {
+    width: 100%;
+  }
+
+  .tintSolutions {
+    margin-bottom: 4rem;
+  }
+
+  .tintSolutions > div {
+    flex-direction: column;
+  }
+
+  .tintSolutions > div > div {
+    padding: 0;
+  }
+
+  .tintSolutionsImageWrapper {
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .tintSolutionsImageWrapper img {
+    position: relative !important;
+    right: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+  }
+}
+
+
+/* Reviews Section */
+.reviewsSection {
+  text-align: center;
+  overflow: hidden;
+  margin: 5rem 0;
+  padding: 6rem 0;
+  background: url('/img/car_background.jpg') center center;
+  background-size: cover;
+}
+
+.reviewsSection:before, .reviewsSection:after {
+  position: absolute;
+  content: '';
+  left: 0;
+  width: 100%;
+  height: 150px;
+  z-index: 1;
+}
+
+.reviewsSection:before {
+  top: 0;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,1+100 */
+  background: linear-gradient(to top,  rgba(0,0,0,0) 50%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.reviewsSection:after {
+  bottom: 0;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,1+100 */
+  background: linear-gradient(to bottom,  rgba(0,0,0,0) 50%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.reviewsSection > div {
+  position: relative;
+  z-index: 2;
+}
+
+.reviewsSubheading {
+  font-size: 1.5rem;
+}
+
+.starsWrapper {
+  margin: 2rem 0 1.5rem;
+}
+
+.starsWrapper img {
+  margin: 0 1px;
+}
+
+.starsWrapper img:nth-child(2),
+.starsWrapper img:nth-child(4){
+  margin-bottom: 7px;
+}
+
+.starsWrapper img:nth-child(3){
+  margin-bottom: 14px;
+}
+
+.reviewsWrapper {
+  max-width: 100%;
+  margin: 1rem auto 3rem;
+}
+
+.singleSlide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carouselControlsWrapper img {
+  margin: 2rem 25px;
+  cursor: pointer;
+}
+
+.carouselRightControl {
+  transform: rotate(180deg);
+}
+
+.reviewsHelpedHeader {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+@media (min-width: 1200px){
+  .carouselControlsWrapper img {
+    opacity: .7;
+    transition: opacity .2s;
+  }
+  
+  .carouselControlsWrapper img:hover {
+    opacity: 1;
+  }
+}
+
+/* Contact Section */
+.contactSection {
+  margin: 5rem auto;
+}
+
+.contactWrapper {
+  display: flex;
+}
+
+.contactWrapper > div {
+  flex-grow: 1;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+@media (min-width: 1201px){
+  .contactCopy {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 1200px){
+  .contactWrapper {
+    flex-direction: column;
+  }
+}
+
+
+/* Section margins on smaller screen sizes */
+@media (max-width: 600px){
+  .gallerySection {
+    padding-top: 2rem;
+    margin: 6rem auto;
+  }
+
+  .reviewsSection {
+    margin: 3rem auto;
+  }
+
+  .contactSection {
+    margin: 1rem auto;
+  }
+}
