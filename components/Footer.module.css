@@ -45,6 +45,14 @@
     margin: 0 8px;
 }
 
+.authorizedDealersWrapper {
+    margin-bottom: 2rem;
+}
+
+.authorizedDealerLogo {
+    margin: 5px 10px;
+}
+
 .footerCopyright {
     opacity: .7;
 }

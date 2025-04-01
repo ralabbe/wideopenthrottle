@@ -30,7 +30,7 @@ const Navbar = () => {
     <header>
       <nav className={`${styles.navbar} ${stickyActive == true ? styles.stickyNavbar : ''}`}>
         <div className="container">
-          <div><Link href="/" aria-label="Go to home"><Image src={`${process.env.BASE_PATH}/img/wot-logo.svg`} width={230} height={100} alt="Wide Open Throttle"/></Link></div>
+          <div><Link href="/" aria-label="Go to home"><Image src={`${process.env.BASE_PATH}/img/wot-logo-2.png`} width={230} height={100} alt="Wide Open Throttle"/></Link></div>
           <ul className={mobileActive === true ? styles.mobileMenuActive : styles.mobileMenuClosed}>
             <li className={styles.navClose}><button onClick={() => { setMobileActive(false); }}><Image src={`${process.env.BASE_PATH}/img/icons/close-x.svg`} width={30} height={30} alt="Close" aria-label="Close navbar" /></button></li>
             <li><Link href="/#film-services" onClick={() => { setMobileActive(false); }}>Auto Services</Link></li>
