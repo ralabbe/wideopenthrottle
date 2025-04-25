@@ -38,9 +38,9 @@ const ContactForm = () => {
         console.log(response);
 
         if (typeof response === 'object' && response.success === true){
+            gtag('event', 'conversion', {'send_to': 'AW-16948877149/egOhCOKe67UaEN2u7ZE_'});
             setFormSent(true)
         } else {
-            console.log('not sent');
             setFormSendError(true);
         }
         setSending(false);
